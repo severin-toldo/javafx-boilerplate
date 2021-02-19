@@ -1,0 +1,78 @@
+package com.stoldo.m120_rcas_projektarbeit.shared.util;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.MessageFormat;
+import java.util.ResourceBundle;
+
+import com.stoldo.m120_rcas_projektarbeit.gui.AbstractController;
+import com.stoldo.m120_rcas_projektarbeit.shared.constants.PathConstants;
+import com.stoldo.m120_rcas_projektarbeit.shared.constants.TranslationKey;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+public class JavaFxUtils {
+	
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle(PathConstants.RESOURCE_BUNDLE_PATH);
+	
+	
+	public static <T extends Pane> T load(AbstractController controller) throws Exception {
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		
+		fxmlLoader.setLocation(controller.getClass().getResource(controller.getFxmlFileName()));
+		fxmlLoader.setController(controller);
+		fxmlLoader.setResources(getResourceBundle());
+		
+		return fxmlLoader.load();
+	}
+	
+	public static Stage openSubWindow(AbstractController c, double width, double height, TranslationKey titleTranslationKey) throws Exception {
+		Stage subStage = new Stage();
+		c.load(subStage);
+		Scene subScene = new Scene(c.getPane(), width, height);
+		subStage.setScene(subScene);
+		subStage.setTitle(translate(titleTranslationKey));
+		subStage.initModality(Modality.APPLICATION_MODAL);
+		subStage.show();
+		
+		return subStage;
+	}
+	
+	public static String translate(TranslationKey translationKey) {
+		return getResourceBundle().getString(translationKey.name());
+	}
+	
+	public static String translate(TranslationKey translationKey, Object... params) {
+		return MessageFormat.format(translate(translationKey), params);
+	}
+	
+	public static ResourceBundle getResourceBundle() {
+		return RESOURCE_BUNDLE;
+	}
+	
+	public static Image getImage(String fileName) throws FileNotFoundException {
+		return getImage(Paths.get(PathConstants.IMAGE_PATH + File.separator + fileName));
+	}
+	
+	public static Image getImage(File file) throws FileNotFoundException {
+		return getImage(Paths.get(file.getAbsolutePath()));
+	}
+	
+	private static Image getImage(Path path) throws FileNotFoundException {
+		File f = path.toFile();
+		
+		if (!f.exists() || !f.isFile()) {
+			throw new FileNotFoundException("File " + path + " Doesnt exist!");
+		}
+	    
+	    return new Image(new FileInputStream(f));	
+	}
+}
