@@ -1,4 +1,4 @@
-package com.stoldo.m120_rcas_projektarbeit.shared.util;
+package com.stoldo.javafx_boilerplate.shared.util;
 
 import org.codejargon.feather.Feather;
 

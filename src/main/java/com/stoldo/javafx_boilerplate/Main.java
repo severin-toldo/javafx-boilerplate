@@ -1,4 +1,4 @@
-package com.stoldo.m120_rcas_projektarbeit;
+package com.stoldo.javafx_boilerplate;
 
 
 public class Main {

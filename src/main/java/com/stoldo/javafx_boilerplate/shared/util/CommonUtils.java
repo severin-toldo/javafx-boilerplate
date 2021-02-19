@@ -1,11 +1,11 @@
-package com.stoldo.m120_rcas_projektarbeit.shared.util;
+package com.stoldo.javafx_boilerplate.shared.util;
 
 import java.io.File;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 
-import com.stoldo.m120_rcas_projektarbeit.shared.constants.PathConstants;
+import com.stoldo.javafx_boilerplate.shared.constants.PathConstants;
 
 public class CommonUtils {
 	

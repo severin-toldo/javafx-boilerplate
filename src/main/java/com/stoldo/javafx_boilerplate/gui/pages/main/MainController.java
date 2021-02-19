@@ -1,9 +1,9 @@
-package com.stoldo.m120_rcas_projektarbeit.gui.pages.main;
+package com.stoldo.javafx_boilerplate.gui.pages.main;
 
 import javax.inject.Inject;
 
-import com.stoldo.m120_rcas_projektarbeit.gui.AbstractController;
-import com.stoldo.m120_rcas_projektarbeit.service.ExampleService;
+import com.stoldo.javafx_boilerplate.gui.AbstractController;
+import com.stoldo.javafx_boilerplate.service.ExampleService;
 
 
 public class MainController extends AbstractController {

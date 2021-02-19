@@ -1,4 +1,4 @@
-package com.stoldo.m120_rcas_projektarbeit.service;
+package com.stoldo.javafx_boilerplate.service;
 
 import javax.inject.Singleton;
 

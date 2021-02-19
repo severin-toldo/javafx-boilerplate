@@ -1,10 +1,10 @@
-package com.stoldo.m120_rcas_projektarbeit.gui;
+package com.stoldo.javafx_boilerplate.gui;
 
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.stoldo.m120_rcas_projektarbeit.shared.util.FeatherUtils;
-import com.stoldo.m120_rcas_projektarbeit.shared.util.JavaFxUtils;
+import com.stoldo.javafx_boilerplate.shared.util.FeatherUtils;
+import com.stoldo.javafx_boilerplate.shared.util.JavaFxUtils;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;

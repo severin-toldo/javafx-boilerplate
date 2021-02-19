@@ -1,9 +1,9 @@
-package com.stoldo.m120_rcas_projektarbeit;
+package com.stoldo.javafx_boilerplate;
 
-import com.stoldo.m120_rcas_projektarbeit.gui.AbstractController;
-import com.stoldo.m120_rcas_projektarbeit.gui.pages.main.MainController;
-import com.stoldo.m120_rcas_projektarbeit.shared.constants.TranslationKey;
-import com.stoldo.m120_rcas_projektarbeit.shared.util.JavaFxUtils;
+import com.stoldo.javafx_boilerplate.gui.AbstractController;
+import com.stoldo.javafx_boilerplate.gui.pages.main.MainController;
+import com.stoldo.javafx_boilerplate.shared.constants.TranslationKey;
+import com.stoldo.javafx_boilerplate.shared.util.JavaFxUtils;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

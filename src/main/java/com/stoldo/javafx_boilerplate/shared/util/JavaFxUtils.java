@@ -1,4 +1,4 @@
-package com.stoldo.m120_rcas_projektarbeit.shared.util;
+package com.stoldo.javafx_boilerplate.shared.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,9 +8,9 @@ import java.nio.file.Paths;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
-import com.stoldo.m120_rcas_projektarbeit.gui.AbstractController;
-import com.stoldo.m120_rcas_projektarbeit.shared.constants.PathConstants;
-import com.stoldo.m120_rcas_projektarbeit.shared.constants.TranslationKey;
+import com.stoldo.javafx_boilerplate.gui.AbstractController;
+import com.stoldo.javafx_boilerplate.shared.constants.PathConstants;
+import com.stoldo.javafx_boilerplate.shared.constants.TranslationKey;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package com.stoldo.m120_rcas_projektarbeit.shared.constants;
+package com.stoldo.javafx_boilerplate.shared.constants;
 
 
 public enum TranslationKey {
