@@ -3,6 +3,7 @@ package com.stoldo.m120_rcas_projektarbeit.gui;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.stoldo.m120_rcas_projektarbeit.shared.util.FeatherUtils;
 import com.stoldo.m120_rcas_projektarbeit.shared.util.JavaFxUtils;
 
 import javafx.fxml.FXML;
@@ -19,6 +20,9 @@ public abstract class AbstractController {
 	@Getter
 	private Stage stage;
 	
+	public AbstractController() {
+		FeatherUtils.injectFields(this);
+	}
 	
 	public String getFxmlFileName() {
 		return StringUtils.replace(getClass().getSimpleName(), "Controller", ".fxml");
